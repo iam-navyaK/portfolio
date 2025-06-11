@@ -2,152 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Personal Portfolio Website</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
+    <title>Navya Keerthana - Terminal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Koya Navya Keerthana</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <div class="social-media">
-                <a href="https://github.com/iam-navyaK"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/navya-keerthana-k/"><i class='bx bxl-linkedin-square'></i></a>
-            </div>
-            <a href="https://drive.google.com/file/d/1CglvraQnKf5zZPLBAKrmHTxfvufRGWzi/view" class="btn">Download CV</a>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="https://plus.unsplash.com/premium_photo-1720287601300-cf423c3d6760?w=600" alt="">
-        </div>
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>MERN Stack Developer</h3>
-            <p>I'm a passionate MERN Stack Developer with hands-on experience in building full-stack web applications using MongoDB, Express.js, React, and Node.js.</p>
-            <a href="#" class="btn">Read More</a>
-        </div>
-    </section>
-
-    <section class="services" id="services">
-        <h2 class="heading">Our <span>Services</span></h2>
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Full-Stack Web Development</h3>
-                <p>I develop dynamic and responsive full-stack web applications using the MERN stack tailored to user needs.</p>
-                <a href="https://github.com/iam-navyaK" class="btn">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxl-instagram-alt'></i>
-                <h3>Content Writing & Blogging</h3>
-                <p>I craft SEO-friendly content for websites and tech blogs that improves user experience and reach.</p>
-                <a href="https://navyak.hashnode.dev/" class="btn">Read More</a>
+    <div class="container">
+        <div class="hero-section">
+            <div class="name-banner">
+                <h1 class="name-title">NAVYA KEERTHANA KOYA</h1>
+                <p class="name-subtitle">Electronics & Communication Engineer | Full-Stack Developer | IoT Enthusiast</p>
             </div>
         </div>
-    </section>
 
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="https://images.unsplash.com/photo-1544655152-4dc3bc4df059?w=600" alt="">
-                <div class="portfolio-layer">
-                    <h4>Personal Portfolio</h4>
-                    <p>Portfolio website to showcase projects, social links, and experience.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+        <div class="terminal-wrapper">
+            <div class="terminal-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+                <div class="terminal-title">navya-keerthana@portfolio:~</div>
+                <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+            </div>
+            
+            <div class="terminal" id="terminal">
+                <div class="welcome-text">
+                    <div class="welcome-line">🚀 <span class="success-text">Welcome to my Interactive Terminal Portfolio!</span></div>
+                    <div class="welcome-line">💡 Type <span class="highlight">'help'</span> to explore available commands</div>
+                    <div class="welcome-line">🎯 Type <span class="highlight">'cd all'</span> for complete portfolio overview</div>
+                </div>
+                
+                <div id="output"></div>
+                
+                <div class="input-line">
+                    <span class="prompt">navya@portfolio:~$</span>
+                    <input type="text" class="terminal-input" id="terminalInput" autofocus placeholder="Type a command...">
+                    <span class="cursor"></span>
                 </div>
             </div>
-            <div class="portfolio-box">
-                <img src="https://images.unsplash.com/photo-1642551123019-00407c2c2a1f?w=600" alt="">
-                <div class="portfolio-layer">
-                    <h4>User Management</h4>
-                    <p>A MERN stack user management system with features like registration, login, and admin controls.</p>
-                    <a href="https://github.com/iam-navyaK/user-management-app"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="https://images.unsplash.com/photo-1604866830893-c13cafa515d5?w=600" alt="">
-                <div class="portfolio-layer">
-                    <h4>Library Management</h4>
-                    <p>MERN-based library system to manage books and issue records.</p>
-                    <a href="https://github.com/iam-navyaK/library-management-mern"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
-        <form name="submit-to-google-sheet">
-            <div class="input-box">
-                <input type="text" name="Name" placeholder="Full Name">
-                <input type="email" name="Email Address" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="number" name="Mobile Number" placeholder="Mobile Number">
-                <input type="text" name="Email Subject" placeholder="Email Subject">
-            </div>
-            <textarea name="Your Message" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-        <span id="msg"></span>
-    </section>
-    <div id="chatbot">
-        <button id="chatbot-toggle" onclick="toggleChat()">💬</button>
-        <div id="chatbox" style="display: none;">
-            <div id="chatbox-header">
-                <span>Chat with us!</span>
-                <button onclick="closeChat()">X</button>
-            </div>
-            <div id="chatbox-messages"></div>
-            <input type="text" id="user-input" placeholder="Type a message..." onkeydown="sendMessage(event)">
         </div>
     </div>
-    <footer class="footer">
-        <div class="footer-text">
-            <p>&copy; 2025 by Koya Navya Keerthana | All Rights Reserved.</p>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
-    </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyOw3dfr7iDGlpMJKfPgL5LoPmFMLPUqPFFhSR_fBTNuRwb94rHEMNw_QRXCYiG6UqI/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(() => msg.innerHTML = "", 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+    <script src="1.js"></script>
 </body>
 </html>
