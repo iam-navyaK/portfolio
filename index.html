@@ -11,12 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="hero-section">
-            <div class="name-banner">
-                <h1 class="name-title">NAVYA KEERTHANA KOYA</h1>
-                <p class="name-subtitle">Electronics & Communication Engineer | Full-Stack Developer | IoT Enthusiast</p>
-            </div>
-        </div>
+   
 
         <div class="terminal-wrapper">
             <div class="terminal-header">
@@ -25,21 +20,61 @@
                     <div class="control minimize"></div>
                     <div class="control maximize"></div>
                 </div>
-                <div class="terminal-title">navya-keerthana@portfolio:~</div>
-                <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+                <div class="terminal-title">navya-keerthana-koya@portfolio:~</div>
+           
             </div>
             
             <div class="terminal" id="terminal">
                 <div class="welcome-text">
-                    <div class="welcome-line">🚀 <span class="success-text">Welcome to my Interactive Terminal Portfolio!</span></div>
+                   
                     <div class="welcome-line">💡 Type <span class="highlight">'help'</span> to explore available commands</div>
-                    <div class="welcome-line">🎯 Type <span class="highlight">'cd all'</span> for complete portfolio overview</div>
+                    <div class="about-container">
+  <pre class="ascii-art">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠤⠖⠚⢉⣩⣭⡭⠛⠓⠲⠦⣄⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⡴⠋⠁⠀⠀⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠳⢦⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⡴⠃⢀⡴⢳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣆⠀⠀⠀
+⠀⠀⠀⠀⡾⠁⣠⠋⠀⠈⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧⠀⠀
+⠀⠀⠀⣸⠁⢰⠃⠀⠀⠀⠈⢣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣇⠀
+⠀⠀⠀⡇⠀⡾⡀⠀⠀⠀⠀⣀⣹⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠀
+⠀⠀⢸⠃⢀⣇⡈⠀⠀⠀⠀⠀⠀⢀⡑⢄⡀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⢸⠀⢻⡟⡻⢶⡆⠀⠀⠀⠀⡼⠟⡳⢿⣦⡑⢄⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⣸⠀⢸⠃⡇⢀⠇⠀⠀⠀⠀⠀⡼⠀⠀⠈⣿⡗⠂⠀⠀⠀⠀⠀⠀⠀⢸⠁
+⠀⠀⡏⠀⣼⠀⢳⠊⠀⠀⠀⠀⠀⠀⠱⣀⣀⠔⣸⠁⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀
+⠀⠀⡇⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⢸⠃⠀
+⠀⢸⠃⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠁⠀⠀⢀⠀⠀⠀⠀⠀⣾⠀⠀
+⠀⣸⠀⠀⠹⡄⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⡞⠀⠀⠀⠸⠀⠀⠀⠀⠀⡇⠀⠀
+⠀⡏⠀⠀⠀⠙⣆⠀⠀⠀⠀⠀⠀⠀⢀⣠⢶⡇⠀⠀⢰⡀⠀⠀⠀⠀⠀⡇⠀⠀
+⢰⠇⡄⠀⠀⠀⡿⢣⣀⣀⣀⡤⠴⡞⠉⠀⢸⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⣧⠀⠀
+⣸⠀⡇⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⢹⠀⠀⢸⠀⠀⢀⣿⠇⠀⠀⠀⠁⠀⢸⠀⠀
+⣿⠀⡇⠀⠀⠀⠀⠀⢀⡤⠤⠶⠶⠾⠤⠄⢸⠀⡀⠸⣿⣀⠀⠀⠀⠀⠀⠈⣇⠀
+⡇⠀⡇⠀⠀⡀⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠸⡌⣵⡀⢳⡇⠀⠀⠀⠀⠀⠀⢹⡀
+⡇⠀⠇⠀⠀⡇⡸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠮⢧⣀⣻⢂⠀⠀⠀⠀⠀⠀⢧
+⣇⠀⢠⠀⠀⢳⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡎⣆⠀⠀⠀⠀⠀⠘
+⢻⠀⠈⠰⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠘⢮⣧⡀⠀⠀⠀⠀
+⠸⡆⠀⠀⠇⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠆⠀⠀⠀⠀⠀⠀⠀⠙⠳⣄⡀⢢⡀
+  </pre>
+
+  <div class="about-text">
+  <div class="highlight">✨ Hello, I'm Navya Keerthana</div>
+  <p class="line">
+   An ECE student turned full-stack developer with real-world IoT and web projects, strong leadership, and a drive to deliver secure, scalable tech solutions
+  </p>
+
+  <div class="contact-links">
+    <a href="https://github.com/iam-navyaK" target="_blank" class="icon-link" aria-label="GitHub">🐙 GitHub</a>
+    <a href="https://linkedin.com/in/koya-navya-keerthana" target="_blank" class="icon-link" aria-label="LinkedIn">🔗 LinkedIn</a>
+    <a href="mailto:keerthanakoya10@gmail.com" class="icon-link" aria-label="Email">✉️ Mail</a>
+  </div>
+</div>
+
+</div>
+
                 </div>
                 
                 <div id="output"></div>
                 
                 <div class="input-line">
-                    <span class="prompt">navya@portfolio:~$</span>
+                    <span class="prompt">navya-keerthana-koya@portfolio:~$</span>
                     <input type="text" class="terminal-input" id="terminalInput" autofocus placeholder="Type a command...">
                     <span class="cursor"></span>
                 </div>

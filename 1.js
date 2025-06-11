@@ -1,33 +1,6 @@
 // Koya Navya Keerthana - Terminal Portfolio JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Theme toggle functionality
-    const themeToggle = document.querySelector('.theme-toggle');
-    const body = document.body;
-    
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    if (savedTheme === 'light') {
-        body.setAttribute('data-theme', 'light');
-        if (themeToggle) themeToggle.textContent = '🌙 Dark';
-    } else {
-        if (themeToggle) themeToggle.textContent = '☀️ Light';
-    }
-    
-    // Theme toggle event listener
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme');
-            if (currentTheme === 'light') {
-                body.removeAttribute('data-theme');
-                themeToggle.textContent = '☀️ Light';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                body.setAttribute('data-theme', 'light');
-                themeToggle.textContent = '🌙 Dark';
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    }
+   
     
     // Window controls functionality
     const closeBtn = document.querySelector('.close');
@@ -105,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Add command to terminal
         const commandLine = document.createElement('div');
-        commandLine.innerHTML = `<span class="prompt">navya@portfolio:~$</span> <span class="command-text">${command}</span>`;
+        commandLine.innerHTML = `<span class="prompt">navya-keerthana-koya@portfolio:~$</span> <span class="command-text">${command}</span>`;
         outputDiv.appendChild(commandLine);
         
         // Process command
@@ -139,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="content-point">contact - Get contact information</div>
                 <div class="content-point">all - Display complete portfolio</div>
                 <div class="content-point">clear - Clear the terminal</div>
-                <div class="content-point">theme - Toggle light/dark theme</div>
+                
             `,
             'about': `
                 <div class="highlight">👋 About Koya Navya Keerthana</div>
@@ -203,32 +176,55 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="content-point">Led content creation and strategic planning initiatives</div>
                 </div>
             `,
-            'projects': `
-                <div class="highlight">🚀 Featured Projects</div>
-                <div class="project-card">
-                    <div class="project-title">👥 UserVerse - User Management System</div>
-                    <div class="content-point">Fully responsive system using React and Bootstrap</div>
-                    <div class="content-point">Enhanced user engagement across 5 different device types</div>
-                    <div class="content-point">JWT-based authentication for secure access</div>
-                    <div class="content-point">MongoDB integration for efficient CRUD operations</div>
-                    <div><span class="tech-stack">React</span><span class="tech-stack">Bootstrap</span><span class="tech-stack">Node.js</span><span class="tech-stack">Express</span><span class="tech-stack">MongoDB</span><span class="tech-stack">JWT</span></div>
-                </div>
-                <div class="project-card">
-                    <div class="project-title">🔒 Private Network with WireGuard VPN</div>
-                    <div class="content-point">Configured WireGuard VPN server for secure networking</div>
-                    <div class="content-point">Implemented IP forwarding and NAT for subnet communication</div>
-                    <div class="content-point">Conducted network traffic analysis for debugging</div>
-                    <div><span class="tech-stack">WireGuard</span><span class="tech-stack">VPN</span><span class="tech-stack">Network Security</span><span class="tech-stack">Linux</span></div>
-                </div>
-                <div class="project-card">
-                    <div class="project-title">🌦️ LoRa-based Wireless Weather Station</div>
-                    <div class="content-point">IoT system using ESP32 and Arduino Nano</div>
-                    <div class="content-point">Real-time monitoring: temperature, humidity, pressure, light, rainfall</div>
-                    <div class="content-point">Long-range, low-power LoRa communication (RA-02 SX1278)</div>
-                    <div class="content-point">Optimized for remote environmental monitoring and agriculture</div>
-                    <div><span class="tech-stack">ESP32</span><span class="tech-stack">Arduino</span><span class="tech-stack">LoRa</span><span class="tech-stack">IoT</span><span class="tech-stack">Sensors</span></div>
-                </div>
-            `,
+   'projects': `
+    <div class="highlight">🚀 Featured Projects</div>
+
+    <div class="project-card">
+        <div class="project-title">
+            👥 UserVerse - User Management System
+            <a href="https://github.com/iam-navyaK/user-management-app" target="_blank" class="link-icon">↗</a>
+        </div>
+        <div class="content-point">Fully responsive system using React and Bootstrap</div>
+        <div class="content-point">Enhanced user engagement across 5 different device types</div>
+        <div class="content-point">JWT-based authentication for secure access</div>
+        <div class="content-point">MongoDB integration for efficient CRUD operations</div>
+        <div>
+            <span class="tech-stack">React</span><span class="tech-stack">Bootstrap</span><span class="tech-stack">Node.js</span><span class="tech-stack">Express</span><span class="tech-stack">MongoDB</span><span class="tech-stack">JWT</span>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-title">
+            🔒 Private Network with WireGuard VPN
+            <!-- Add redirect icon only if you have a live link -->
+            <!-- Example:
+            <a href="https://github.com/your-username/wireguard-project" target="_blank" class="link-icon">↗</a>
+            -->
+        </div>
+        <div class="content-point">Configured WireGuard VPN server for secure networking</div>
+        <div class="content-point">Implemented IP forwarding and NAT for subnet communication</div>
+        <div class="content-point">Conducted network traffic analysis for debugging</div>
+        <div>
+            <span class="tech-stack">WireGuard</span><span class="tech-stack">VPN</span><span class="tech-stack">Network Security</span><span class="tech-stack">Linux</span>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-title">
+            🌦️ LoRa-based Wireless Weather Station
+            <a href="https://lora-based-wireless-weather-station.vercel.app/" target="_blank" class="link-icon">↗</a>
+        </div>
+        <div class="content-point">IoT system using ESP32 and Arduino Nano</div>
+        <div class="content-point">Real-time monitoring: temperature, humidity, pressure, light, rainfall</div>
+        <div class="content-point">Long-range, low-power LoRa communication (RA-02 SX1278)</div>
+        <div class="content-point">Optimized for remote environmental monitoring and agriculture</div>
+        <div>
+            <span class="tech-stack">ESP32</span><span class="tech-stack">Arduino</span><span class="tech-stack">LoRa</span><span class="tech-stack">IoT</span><span class="tech-stack">Sensors</span>
+        </div>
+    </div>
+`
+
+,
             'achievements': `
                 <div class="highlight">🏆 Achievements</div>
                 <div class="project-card">
@@ -416,11 +412,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         const welcomeMessage = document.createElement('div');
         welcomeMessage.className = 'command-output';
-        welcomeMessage.innerHTML = `
-            <div class="success-text">🎉 Welcome to Koya Navya Keerthana's Portfolio!</div>
-            <div class="muted-text">Type 'help' to see available commands or 'all' to view complete portfolio</div>
-            <div class="muted-text">📧 keerthanakoya10@gmail.com | 📱 +91 8639658401</div>
-        `;
+        
+        ;
         
         if (terminal) {
             terminal.appendChild(welcomeMessage);
